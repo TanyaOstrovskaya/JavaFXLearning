@@ -1,6 +1,7 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
@@ -19,15 +20,12 @@ public class SearchWindowController {
     @FXML
     private void onSubmit(){
         try {
-            stage = (Stage)submitButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/MainWindow.fxml"));
             Scene scene = new Scene(loader.load());
 
             MainWindowController controller = loader.getController();
             setMainWindowParams(controller);
-
-            stage.setTitle("Main window");
             stage.setScene(scene);
             stage.show();
         } catch (IOException ex) {
@@ -43,13 +41,13 @@ public class SearchWindowController {
 
     @FXML
     public void openDialogButton(ActionEvent actionEvent) {
+        Node source = (Node)actionEvent.getSource();
+        this.stage = (Stage)source.getScene().getWindow();
+
         DirectoryChooser chooser = new DirectoryChooser();
-        chooser.setTitle("Выберите директорию");
         File userDir = chooser.showDialog(stage);
         if (userDir != null) {
             selectedDirName.setText(userDir.getAbsolutePath());
-        } else  {
-            selectedDirName.setText(null);
         }
     }
 }
