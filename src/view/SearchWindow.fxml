@@ -36,7 +36,7 @@
 
     <Label  GridPane.columnIndex="1" GridPane.rowIndex="1">Введите путь к директории поиска файлов:</Label>
     <TextField fx:id="selectedDirName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-    <Button fx:id="dialogWindowButton" onAction="#openDialogButton" GridPane.columnIndex="3" GridPane.rowIndex="3" alignment="CENTER_RIGHT">ОБЗОР...</Button>
+    <Button fx:id="dialogWindowButton" onAction="#onOpenDialog" GridPane.columnIndex="3" GridPane.rowIndex="3" alignment="CENTER_RIGHT">ОБЗОР...</Button>
     <Label GridPane.columnIndex="1" GridPane.rowIndex="5">Укажите расширения файлов (через пробел / ENTER):</Label>
     <TextArea fx:id="extTextArea" GridPane.columnSpan="3" GridPane.columnIndex="1" GridPane.rowIndex="7" />
     <Label GridPane.columnIndex="1" GridPane.rowIndex="9">Введите текст поиска:</Label>

@@ -3,7 +3,7 @@ import javafx.fxml.FXML;
 
 public class MainWindowController {
 
-    @FXML private javafx.scene.control.Label fileNameLabel;
+    @FXML private javafx.scene.control.Label dirNameLabel;
 
     private String inputDirPath;
     private String inputExtentions;
@@ -24,7 +24,7 @@ public class MainWindowController {
 
     public void setInputDirPath(String inputDirPath) {
         this.inputDirPath = inputDirPath;
-        fileNameLabel.setText(inputDirPath);
+        dirNameLabel.setText("Найденные файлы в директории" + inputDirPath);
     }
 
     public String getInputExtentions() {

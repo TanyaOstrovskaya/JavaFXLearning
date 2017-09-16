@@ -10,8 +10,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class SearchWindowController {
-
-    @FXML   private javafx.scene.control.Button submitButton;
+    
     @FXML   private javafx.scene.control.TextField selectedDirName;
     @FXML   private javafx.scene.control.TextArea extTextArea;
     @FXML   private javafx.scene.control.TextArea searchTextArea;
@@ -40,7 +39,7 @@ public class SearchWindowController {
     }
 
     @FXML
-    public void openDialogButton(ActionEvent actionEvent) {
+    public void onOpenDialog(ActionEvent actionEvent) {
         Node source = (Node)actionEvent.getSource();
         this.stage = (Stage)source.getScene().getWindow();
 
