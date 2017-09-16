@@ -1,18 +1,21 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import java.util.List;
+
 public class MainWindowController {
 
     @FXML private javafx.scene.control.Label dirNameLabel;
 
     private String inputDirPath;
-    private String inputExtentions;
+    private String[]  inputExtentions;
     private String inputSearchText;
+
 
     public MainWindowController() {
     }
 
-    public MainWindowController(String inputPath, String inputExtentions, String inputSearchText) {
+    public MainWindowController(String inputPath, String[] inputExtentions, String inputSearchText) {
         this.inputDirPath = inputPath;
         this.inputExtentions = inputExtentions;
         this.inputSearchText = inputSearchText;
@@ -24,16 +27,12 @@ public class MainWindowController {
 
     public void setInputDirPath(String inputDirPath) {
         this.inputDirPath = inputDirPath;
-        dirNameLabel.setText("Найденные файлы в директории" + inputDirPath);
+        dirNameLabel.setText(inputDirPath);
     }
 
-    public String getInputExtentions() {
-        return inputExtentions;
-    }
+    public String[] getInputExtentions() { return inputExtentions;   }
 
-    public void setInputExtentions(String inputExtentions) {
-        this.inputExtentions = inputExtentions;
-    }
+    public void setInputExtentions(String[] inputExtentions) { this.inputExtentions = inputExtentions; }
 
     public String getInputSearchText() {
         return inputSearchText;

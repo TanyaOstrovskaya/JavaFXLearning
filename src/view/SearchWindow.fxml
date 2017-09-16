@@ -8,37 +8,37 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="panelId" fx:controller="SearchWindowController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="panelId" fx:controller="SearchWindowController" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
     <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="5.0" prefWidth="5.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="80" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="5.0" prefWidth="5.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="15" prefWidth="50" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="5.0" prefWidth="5.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="5.0" prefWidth="5.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="5.0" prefWidth="5.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="65" minWidth="65.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="5.0" prefWidth="5.0" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10" percentHeight="20" prefHeight="10" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="100" percentHeight="35" prefHeight="100" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
+        <RowConstraints minHeight="20" prefHeight="20" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
+        <RowConstraints minHeight="20" prefHeight="20" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
+        <RowConstraints minHeight="20" prefHeight="20" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
+        <RowConstraints minHeight="20" vgrow="ALWAYS" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
+        <RowConstraints minHeight="20"  prefHeight="20" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
+        <RowConstraints minHeight="100" vgrow="ALWAYS" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
+        <RowConstraints minHeight="20"  prefHeight="20" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="5" prefHeight="5" vgrow="NEVER" />
     </rowConstraints>
 
     <Label  GridPane.columnIndex="1" GridPane.rowIndex="1">Введите путь к директории поиска файлов:</Label>
     <TextField fx:id="selectedDirName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-    <Button fx:id="dialogWindowButton" onAction="#onOpenDialog" GridPane.columnIndex="3" GridPane.rowIndex="3" alignment="CENTER_RIGHT">ОБЗОР...</Button>
+    <Button fx:id="dialogWindowButton" onAction="#onOpenDialog" GridPane.columnIndex="3" GridPane.rowIndex="3" alignment="CENTER">ОБЗОР</Button>
     <Label GridPane.columnIndex="1" GridPane.rowIndex="5">Укажите расширения файлов (через пробел / ENTER):</Label>
-    <TextArea fx:id="extTextArea" GridPane.columnSpan="3" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <TextArea fx:id="extensionsTextArea" GridPane.columnSpan="3" GridPane.columnIndex="1" GridPane.rowIndex="7" />
     <Label GridPane.columnIndex="1" GridPane.rowIndex="9">Введите текст поиска:</Label>
     <TextArea fx:id="searchTextArea" GridPane.columnSpan="3"  GridPane.columnIndex="1" GridPane.rowIndex="11" />
     <Button fx:id="submitButton" onAction="#onSubmit" GridPane.columnIndex="3" GridPane.rowIndex="13" alignment="CENTER_RIGHT" >ИСКАТЬ</Button>

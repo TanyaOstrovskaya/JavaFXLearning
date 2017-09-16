@@ -21,14 +21,16 @@
         <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
         <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
         <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10" percentHeight="7" prefHeight="10" vgrow="SOMETIMES" />
         <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="100" percentHeight="80" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="100" percentHeight="70" vgrow="SOMETIMES" />
         <RowConstraints minHeight="5" prefHeight="5" vgrow="SOMETIMES" />
     </rowConstraints>
 
-    <Button onAction="#onClick" GridPane.columnIndex="1" GridPane.rowIndex="1">Задать параметры поиска</Button>
-    <Label fx:id="dirNameLabel" text="Список найденных файлов:" GridPane.columnIndex="1" GridPane.rowIndex="3">Список найденных файлов:</Label>
-    <Label fx:id="fileNameLabel" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-    <ListView fx:id="filesList" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-    <TextArea fx:id="fileContentArea" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+    <Button onAction="#onClick" GridPane.columnIndex="1" GridPane.rowIndex="1">Изменить параметры поиска</Button>
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="3">Найденные файлы в директории:</Label>
+    <Label fx:id="dirNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="4">(путь к директории)</Label>
+    <Label fx:id="fileNameLabel" GridPane.columnIndex="3" GridPane.rowIndex="3">(путь к текущему файлу)</Label>
+    <ListView fx:id="filesList" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <TextArea fx:id="fileContentArea" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="3"/>
 </GridPane>
