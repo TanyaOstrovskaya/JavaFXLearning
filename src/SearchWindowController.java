@@ -44,6 +44,7 @@ public class SearchWindowController {
             setMainWindowControllerParams(controller);
             stage.setScene(scene);
             stage.show();
+
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -58,7 +59,7 @@ public class SearchWindowController {
     private boolean validateExtentionText() {
         char[] chars = this.extensionsTextArea.getText().toCharArray();
         for (char c : chars) {
-            if (!Character.isLetter(c) || !Character.isSpaceChar(c)) {
+            if (!(Character.isLetter(c) || Character.isSpaceChar(c))) {
                 handleValidationError("Расширения файлов указаны неверно.\nВведите расширения еще раз");
                 return false;
             }
@@ -78,8 +79,9 @@ public class SearchWindowController {
 
     private void setMainWindowControllerParams(MainWindowController controller) {
         controller.setInputDirPath(selectedDirName.getText());
-        controller.setInputExtentions(extensionsTextArea.getText().split("\\s+"));
+        controller.setInputExtensions(extensionsTextArea.getText().split("\\s+"));
         controller.setInputSearchText(searchTextArea.getText());
+        controller.setTreeView(selectedDirName.getText());
     }
 
     @FXML
